@@ -1,0 +1,18 @@
+exclude: ["README.md","assets/"]
+
+collections:
+  pages:
+    output: true
+    permalink: /:path
+
+sass:
+    sass_dir: _styles
+
+source: ''
+destination: _site
+jekyll-bliss:
+  build-folder: _build
+  debug: false
+  quiet: false
+  delete-build-folder: false
+  livereload: true

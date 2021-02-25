@@ -1,0 +1,8 @@
+@mixin anaglyph($distance, $color-one: #ff0000, $color-two: #00ffff)
+  text-shadow: (-$distance) (-$distance) 0 $color-one, $distance $distance $color-two
+
+@mixin transition($elements)
+  transition: $elements
+  -o-transition: $elements
+  -moz-transition: $elements
+  -webkit-transition: $elements

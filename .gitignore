@@ -1,0 +1,5 @@
+node_modules
+_build
+_site
+assets/fonts
+.jekyll-cache

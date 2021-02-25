@@ -1,0 +1,15 @@
+@mixin apply-colors($map)
+  background: map-get($map, bg)
+  color: map-get($map, text)
+  @include apply-nav-colors($map)
+
+@mixin apply-nav-colors($map)
+  div#nav
+    a
+      color: map-get($map, navigation)
+
+body
+  @include apply-colors($colors-default)
+
+body.dark-mode
+  @include apply-colors($colors-dark-mode)
