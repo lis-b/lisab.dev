@@ -7,7 +7,9 @@ html
     link(rel="stylesheet",href="./style.css")
 
   body
+    | {% include dark-mode-toggle.html %}
     div#landing
-      | {% include navigation.html %}
       div.text
+        | {% include navigation.html %}
+        | {% include socials.html %}
         | {{ content }}

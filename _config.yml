@@ -1,4 +1,4 @@
-exclude: ["README.md","assets/","node_modules/"]
+exclude: ["README.md","assets/reset.min.css"]
 
 collections:
   pages:

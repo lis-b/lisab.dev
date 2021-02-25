@@ -1,0 +1,26 @@
+div#toggle
+  cursor: pointer
+  z-index: 999
+
+  svg
+    mask
+      circle
+        @include transform(rotate(-45deg) translate(-20px))
+
+    circle
+      @include transform-center
+
+body.dark-mode
+  div#toggle
+    svg
+      @include rotate(45deg)
+
+      mask
+        circle
+          @include transform(none)
+
+      circle.sun
+        @include scale(1.8)
+
+      g
+        color: transparent

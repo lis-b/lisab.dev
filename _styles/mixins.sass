@@ -7,16 +7,40 @@
   -moz-transition: $elements
   -webkit-transition: $elements
 
+@mixin transition-transform($time)
+  transition: transform $time
+  -o-transition: transform $time
+  -moz-transition: transform $time
+  -webkit-transition: transform $time
+
+@mixin transform($args...)
+  transform: $args
+  -o-transform: $args
+  -ms-transform: $args
+  -moz-transform: $args
+  -webkit-transform: $args
+
+@mixin transform-center
+  transform-origin: center center
+  -o-transform-origin: center center
+  -ms-transform-origin: center center
+  -moz-transform-origin: center center
+  -webkit-transform-origin: center center
+
 @mixin translate($x, $y)
-  transform: translate($x, $y)
-  -o-transform: translate($x, $y)
-  -ms-transform: translate($x, $y)
-  -moz-transform: translate($x, $y)
-  -webkit-transform: translate($x, $y)
+  @include transform(translate($x, $y))
 
 @mixin pretend-not-text
   cursor: default
   @include selection(transparent, inherit)
+
+@mixin rotate($amount)
+  @include transform(rotate($amount))
+  @include transform-center
+
+@mixin scale($factor)
+  @include transform(scale($factor))
+  @include transform-center
 
 @mixin selection($background, $color)
   &::selection
