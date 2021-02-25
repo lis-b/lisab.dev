@@ -3,3 +3,4 @@ _build
 _site
 assets/fonts
 Gemfile.lock
+package-lock.json

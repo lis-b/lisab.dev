@@ -1,4 +1,4 @@
-exclude: ["README.md","assets/"]
+exclude: ["README.md","assets/","node_modules/"]
 
 collections:
   pages:
@@ -7,12 +7,3 @@ collections:
 
 sass:
     sass_dir: _styles
-
-source: ''
-destination: _site
-jekyll-bliss:
-  build-folder: _build
-  debug: false
-  quiet: false
-  delete-build-folder: false
-  livereload: true
