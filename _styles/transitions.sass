@@ -1,6 +1,15 @@
 body
   @include transition(background-color $theme-transition-timing, color $theme-transition-timing)
 
+  div#toggle
+    svg,
+    & circle
+      @include transition-transform($theme-transition-timing)
+
   div#nav
     a
       @include transition(color $theme-transition-timing, text-shadow $transition-timing)
+
+  div#landing
+    h1
+      @include transition(text-shadow $transition-timing)

@@ -10,14 +10,17 @@ div#landing
     text-align: center
     top: 50%
     @include translate(0, -50%)
-    @include pretend-not-text
 
     h1
+      width: auto
       font-size: $landing-title-size
       @include anaglyph($landing-anaglyph-distance)
-      @include transition(text-shadow $transition-timing)
-
-      &:hover
-        @include anaglyph($landing-anaglyph-distance-hover)
+      @include pretend-not-text
 
     h2
+      width: auto
+      @include pretend-not-text
+
+    &:hover
+      h1
+        @include anaglyph($landing-anaglyph-distance-hover)
