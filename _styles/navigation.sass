@@ -1,9 +1,13 @@
 div#nav
+  width: 100%
+  text-align: center
+  font:
+    size: $nav-size
+    weight: $nav-weight
+
   a
     display: inline-block
     margin: 0 15px
-    @include anaglyph($navigation-anaglyph-distance, transparent, transparent)
-    @include transition(text-shadow $transition-timing)
 
     &:hover
-      @include anaglyph($navigation-anaglyph-distance)
+      @include anaglyph($nav-anaglyph-distance)

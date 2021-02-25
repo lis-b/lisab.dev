@@ -1,10 +1,23 @@
 div#landing
   position: relative
-  top: 50%
-  text-align: center
   width: 100%
+  height: 100%
 
-  h1
-    font-size: $landing-title-size
-    height: 1em
-    @include anaglyph($landing-anaglyph-distance)
+  div.text
+    display: block
+    position: absolute
+    width: 100%
+    text-align: center
+    top: 50%
+    @include translate(0, -50%)
+    @include pretend-not-text
+
+    h1
+      font-size: $landing-title-size
+      @include anaglyph($landing-anaglyph-distance)
+      @include transition(text-shadow $transition-timing)
+
+      &:hover
+        @include anaglyph($landing-anaglyph-distance-hover)
+
+    h2

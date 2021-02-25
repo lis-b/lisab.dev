@@ -1,0 +1,6 @@
+body
+  @include transition(background-color $theme-transition-timing, color $theme-transition-timing)
+
+  div#nav
+    a
+      @include transition(color $theme-transition-timing, text-shadow $transition-timing)
