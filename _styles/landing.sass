@@ -14,13 +14,27 @@ div#landing
     h1
       width: auto
       font-size: $landing-title-size
-      @include anaglyph($landing-anaglyph-distance)
+      @include anaglyph($landing-title-anaglyph-distance)
       @include pretend-not-text
 
     h2
       width: auto
+      font:
+        family: $display-font
+        size: $landing-subtitle-size
+        weight: $landing-subtitle-weight
+      margin: $landing-subtitle-margin 0
+      @include anaglyph($landing-subtitle-anaglyph-distance)
       @include pretend-not-text
 
     &:hover
       h1
-        @include anaglyph($landing-anaglyph-distance-hover)
+        @include anaglyph($landing-title-anaglyph-distance-hover)
+
+      h2
+        @include anaglyph($landing-subtitle-anaglyph-distance-hover)
+
+    div#socials
+      svg
+        max-width: 40px
+        margin: 20px 10px 0 10px

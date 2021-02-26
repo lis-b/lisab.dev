@@ -4,11 +4,11 @@ html(lang="en")
     meta(charset="utf-8")
     title {{ page.title }}
 
-    link(rel="stylesheet", href="./style.css")
-    script(src="./scripts.js")
-
+    link(rel="stylesheet", href="/style.css")
+    link(rel="stylesheet", href="https://use.typekit.net/xpe2kic.css")
+    script(src="/scripts.js")
 
   body.dark-mode.stop-transitions(onload="bodyLoaded()")
-    script(src="./dark-mode.js")
+    script(src="/dark-mode.js")
     | {% include dark-mode-toggle.html %}
     | {{ content }}
