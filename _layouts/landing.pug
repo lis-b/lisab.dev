@@ -1,15 +1,9 @@
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    title {{ page.title }}
+---
+layout: base
+---
 
-    link(rel="stylesheet",href="./style.css")
-
-  body
-    | {% include dark-mode-toggle.html %}
-    div#landing
-      div.text
-        | {% include navigation.html %}
-        | {% include socials.html %}
-        | {{ content }}
+div#landing
+  div.text
+    | {% include navigation.html %}
+    | {% include socials.html %}
+    | {{ content }}

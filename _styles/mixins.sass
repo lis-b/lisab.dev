@@ -1,17 +1,5 @@
-@mixin anaglyph($distance, $color-one: #ff0000, $color-two: #00ffff)
+@mixin anaglyph($distance, $color-one: $anaglyph-one, $color-two: $anaglyph-two)
   text-shadow: (-$distance) (-$distance) 0 $color-one, $distance $distance $color-two
-
-@mixin transition($elements...)
-  transition: $elements
-  -o-transition: $elements
-  -moz-transition: $elements
-  -webkit-transition: $elements
-
-@mixin transition-transform($time)
-  transition: transform $time
-  -o-transition: transform $time
-  -moz-transition: transform $time
-  -webkit-transition: transform $time
 
 @mixin transform($args...)
   transform: $args
@@ -26,6 +14,18 @@
   -ms-transform-origin: center center
   -moz-transform-origin: center center
   -webkit-transform-origin: center center
+
+@mixin transition($elements...)
+  transition: $elements
+  -o-transition: $elements
+  -moz-transition: $elements
+  -webkit-transition: $elements
+
+@mixin transition-transform($time)
+  transition: transform $time
+  -o-transition: transform $time
+  -moz-transition: transform $time
+  -webkit-transition: transform $time
 
 @mixin translate($x, $y)
   @include transform(translate($x, $y))
