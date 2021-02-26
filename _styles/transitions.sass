@@ -1,4 +1,4 @@
-body.transitions
+body
   @include transition(background-color $theme-transition-timing, color $theme-transition-timing)
 
   div#toggle
@@ -14,3 +14,8 @@ body.transitions
   div#landing
     h1
       @include transition(text-shadow $transition-timing)
+
+*.stop-transitions
+  &,
+  *
+    @include transition(none !important)
