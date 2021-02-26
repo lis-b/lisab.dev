@@ -1,4 +1,4 @@
-exclude: ["README.md","assets/reset.min.css"]
+exclude: ["README.md"]
 
 collections:
   pages:
