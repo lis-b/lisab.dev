@@ -1,9 +1,18 @@
-exclude: ["README.md"]
+title: "Lisa Brothers"
+description: "I'm working on coding this site right now!"
+
+plugins:
+  - jekyll-postfiles
+
+sass:
+    sass_dir: _styles
+
+exclude:
+  - "README.md"
 
 collections:
   pages:
     output: true
     permalink: /:path
 
-sass:
-    sass_dir: _styles
+permalink: /:categories/:title

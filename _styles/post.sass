@@ -1,0 +1,33 @@
+$post-title-size: 100px
+$post-subtitle-size: 30px
+$post-subtitle-weight: 200
+$post-subtitle-bold-weight: 500
+$post-subtitle-margin-top: -10px
+
+div#post
+  background: pink
+  max-width: 750px
+  margin:
+    top: 200px
+    bottom: 150px
+    left: auto
+    right: auto
+  position: relative
+  padding: 30px
+
+  h1
+    font-size: $post-title-size
+    position: absolute
+    top: -50px
+    left: -20px
+
+  h2
+    margin-top: $post-subtitle-margin-top
+    position: absolute
+    float: right
+    font:
+      size: $post-subtitle-size
+      weight: $post-subtitle-weight
+
+    b
+      font-weight: $post-subtitle-bold-weight

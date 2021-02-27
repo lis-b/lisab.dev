@@ -4,5 +4,7 @@ layout: base
 
 div#landing
   div.text
-    | {{ content }}
+    h1 {{ site.title }}
+    h2 {{ page.subtitle }}
     | {% include socials.html %}
+    | {{ content }}

@@ -16,6 +16,7 @@ const toggleDarkMode = () => {
 
 const setMode = () => {
   if (getVal() === valLight) document.body.classList.remove(className);
+  else setVal(valDark);
 };
 
 setMode();
