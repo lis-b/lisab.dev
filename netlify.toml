@@ -46,3 +46,6 @@ package = "netlify-plugin-subfont"
   # Include fallbacks so the original font will be loaded when dynamic content gets injected at runtime
   # When set to `false` external font files will be created
   fallbacks = true
+
+[[plugins]]
+package = "netlify-plugin-hashfiles"
