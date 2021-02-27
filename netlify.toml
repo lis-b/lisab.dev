@@ -1,3 +1,23 @@
+[[headers]]
+  for = "*.eot"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.ttf"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.woff"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
 [[plugins]]
 package = "netlify-plugin-subfont"
 
@@ -26,3 +46,6 @@ package = "netlify-plugin-subfont"
   # Include fallbacks so the original font will be loaded when dynamic content gets injected at runtime
   # When set to `false` external font files will be created
   fallbacks = true
+
+[[plugins]]
+package = "netlify-plugin-hashfiles"
