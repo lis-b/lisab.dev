@@ -4,3 +4,5 @@ _site
 assets/fonts
 Gemfile.lock
 package-lock.json
+.jekyllcache
+.DS_Store

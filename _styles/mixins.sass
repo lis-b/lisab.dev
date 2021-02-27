@@ -1,10 +1,24 @@
 @mixin anaglyph($distance, $color-one: $anaglyph-one, $color-two: $anaglyph-two)
   text-shadow: (-$distance) (-$distance) 0 $color-one, $distance $distance $color-two
 
-@mixin anaglyph-filter($distance, $color-one: $anaglyph-one, $color-two: $anaglyph-two)
-  $anaglyph: drop-shadow((-$distance) (-$distance) 0 0 $color-one)
-  filter: $anaglyph
-  -webkit-filter: $anaglyph
+@mixin rotate($amount)
+  @include transform(rotate($amount))
+  @include transform-center
+
+@mixin scale($factor)
+  @include transform(scale($factor))
+  @include transform-center
+
+@mixin selection($background, $color)
+  &::selection
+    background: $background
+    color: $color
+  &::-moz-selection
+    background: $background
+    color: $color
+  &::-webkit-selection
+    background: $background
+    color: $color
 
 @mixin transform($args...)
   transform: $args
@@ -35,25 +49,8 @@
 @mixin translate($x, $y)
   @include transform(translate($x, $y))
 
-@mixin pretend-not-text
-  cursor: default
-  @include selection(transparent, inherit)
-
-@mixin rotate($amount)
-  @include transform(rotate($amount))
-  @include transform-center
-
-@mixin scale($factor)
-  @include transform(scale($factor))
-  @include transform-center
-
-@mixin selection($background, $color)
-  &::selection
-    background: $background
-    color: $color
-  &::-moz-selection
-    background: $background
-    color: $color
-  &::-webkit-selection
-    background: $background
-    color: $color
+@mixin user-select($arg)
+  user-select: $arg
+  -ms-user-select: $arg
+  -moz-user-select: $arg
+  -webkit-user-select: $arg
