@@ -5,6 +5,7 @@ Gemfile.lock
 package-lock.json
 .DS_Store
 __FONTS
+.jekyll-cache
 
 # Local Netlify folder
 .netlify
