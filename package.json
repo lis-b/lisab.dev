@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "predeploy": "bliss b",
-    "deploy": "http-server _site/ -c-1",
+    "build": "bliss b",
+    "preserve": "netlify build",
+    "serve": "http-server _site/ -c-1",
     "clean": "rm -rf _site"
   },
   "author": "",

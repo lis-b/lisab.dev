@@ -2,6 +2,7 @@ title: "Lisa Brothers"
 description: "I'm working on coding this site right now!"
 
 plugins:
+  - jekyll-default-layout
   - jekyll-postfiles
 
 sass:
@@ -15,4 +16,4 @@ collections:
     output: true
     permalink: /:path
 
-permalink: /:categories/:title
+permalink: /:title
