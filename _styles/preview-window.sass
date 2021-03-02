@@ -1,0 +1,51 @@
+$preview-window-border-radius: 7px
+
+div.window
+  margin:
+    top: 15px
+    bottom: 15px
+    right: auto
+    left: auto
+  width: 500px
+  border: 2px solid
+  @include border-radius($preview-window-border-radius)
+  overflow: hidden
+
+  div.window-title
+    padding: 5px
+    text-align: center
+    font:
+      size: 10px
+    position: relative
+    height: 20px
+    user-select: none
+
+    div.button-wrapper
+      position: absolute
+      top: 5px
+
+    %window-buttons
+      width: 10px
+      height: 10px
+      display: inline-block
+      margin-right: 5px
+      @include border-radius(10px)
+
+    div.red
+      @extend %window-buttons
+      background: #ff6188
+
+    div.yellow
+      @extend %window-buttons
+      background: #ffd866
+
+    div.green
+      @extend %window-buttons
+      background: #a9dc76
+
+  div.url
+    background: white
+
+  img
+    width: 100%
+    display: block

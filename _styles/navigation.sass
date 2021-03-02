@@ -1,13 +1,23 @@
 div#nav
-  width: 100%
-  text-align: center
-  font:
-    size: $nav-size
-    weight: $nav-weight
+  width: 750px
+  padding: 20px
+  margin: 0 auto
 
-  a
+  a#main
+    font:
+      family: $display-font
+      size: 30px
+      weight: $display-weight
+      float: left
     display: inline-block
-    margin: 0 15px
+    float: left
 
-    &:hover
-      @include anaglyph($nav-anaglyph-distance)
+  div
+    float: right
+    margin-top: 5px
+
+    a
+      font:
+       size: 18px
+      display: inline-block
+      margin: 0 15px

@@ -3,9 +3,12 @@
 
 html
   height: 100%
+  scroll-behavior: smooth
 
 body
-  font-family: $body-font
+  font:
+    family: $body-font
+    weight: $body-weight
   height: 100%
 
 a
@@ -16,14 +19,5 @@ h1
   font-family: $display-font
   font-weight: $display-weight
 
-div#toggle
-  position: fixed
-  top: $toggle-margin
-  right: $toggle-margin
-  z-index: 100
-  svg
-    width: $toggle-width
-
-div#socials
-  svg
-    fill: currentColor
+svg.SimpleIcons
+  fill: currentColor

@@ -4,11 +4,15 @@ $anaglyph-two: #00ffff;
 $colors-default: (
   bg: #ffffff,
   text: #000000,
-  navigation: #000000
+  navigation: #000000,
+  post-bg: #eeeeee,
+  preview-window-bg: #cccccc
 );
 
 $colors-dark-mode: (
   bg: #000000,
   text: #ffffff,
-  navigation: #ffffff
+  navigation: #ffffff,
+  post-bg: #111111,
+  preview-window-bg: #555555
 );

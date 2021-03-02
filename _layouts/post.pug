@@ -2,7 +2,33 @@
 layout: base
 ---
 
-div#post
+div(id="post")
   h1 {{ page.title }}
-  h2 created for #[b {{ page.for }}]
-  div#inner {{ content }}
+
+  | {% if page.for %}
+  h2.created created for #[b {{ page.for }}]
+  | {% endif %}
+
+  h2.dev {% if page.present %}In Development{% else %}{{ page.date | date: "%B %Y" }}{% endif %}
+
+  | {% if page.image %} {% include preview-window.html image=page.image alt="Project preview" link=page.link href=page.href %} {% endif %}
+
+  div#repos
+    | {% if page.github %}
+    a(href="{{ page.github }}", aria-label="GitHub repository")
+      include ../assets/svg/SimpleIcons/github.svg
+    | {% endif %}{% if page.glitch %}
+    a(href="{{ page.glitch }}", aria-label="Glitch project")
+      include ../assets/svg/SimpleIcons/glitch.svg
+    | {% endif %}{% if page.devpost %}
+    a(href="{{ page.devpost }}", aria-label="DevPost page")
+      include ../assets/svg/SimpleIcons/devpost.svg
+    | {% endif %}
+
+  | {% if page.draft %}{% include draft.html %}{% endif %}
+  div#content {{ content }}
+
+  div#end-note
+    | {% include post-end-note.html content=page.technologies title="Technologies" %}
+    | {% include post-end-note.html content=page.deliverables title="Deliverables" %}
+    | {% include post-end-note.html content=page.collaborators title="Collaborators" %}

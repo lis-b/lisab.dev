@@ -1,19 +1,19 @@
 [[headers]]
   for = "*.eot"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=604800, immutable"
 
 [[headers]]
   for = "*.ttf"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=604800, immutable"
 
 [[headers]]
   for = "*.woff"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=604800, immutable"
 
 [[headers]]
   for = "*.woff2"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=604800, immutable"
