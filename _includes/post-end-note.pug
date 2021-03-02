@@ -1,0 +1,8 @@
+| {% if include.content %}
+| {% assign content = include.content | split: ", " %}
+div
+  h6 {{ include.title }}
+  | {% for item in content %}
+  p {{ item }}
+  | {% endfor %}
+| {% endif %}

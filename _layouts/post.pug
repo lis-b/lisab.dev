@@ -2,18 +2,16 @@
 layout: base
 ---
 
-div(id="post", class="{% if page.for %}extra-padding{% endif %}")
+div(id="post")
   h1 {{ page.title }}
 
   | {% if page.for %}
   h2.created created for #[b {{ page.for }}]
   | {% endif %}
 
-  | {% if page.in-dev %}
-  h2.dev in development
-  | {% endif %}
+  h2.dev {% if page.present %}In Development{% else %}{{ page.date | date: "%B %Y" }}{% endif %}
 
-  | {% if page.window-image %} {% include preview-window.html image=page.window-image alt="Project preview" link=page.window-link href=page.actual-url %} {% endif %}
+  | {% if page.image %} {% include preview-window.html image=page.image alt="Project preview" link=page.link href=page.href %} {% endif %}
 
   div#repos
     | {% if page.github %}
@@ -29,3 +27,8 @@ div(id="post", class="{% if page.for %}extra-padding{% endif %}")
 
   | {% if page.draft %}{% include draft.html %}{% endif %}
   div#content {{ content }}
+
+  div#end-note
+    | {% include post-end-note.html content=page.technologies title="Technologies" %}
+    | {% include post-end-note.html content=page.deliverables title="Deliverables" %}
+    | {% include post-end-note.html content=page.collaborators title="Collaborators" %}

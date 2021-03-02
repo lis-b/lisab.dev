@@ -1,10 +1,30 @@
----
-layout: base
----
+doctype html
+html(lang="en")
+  head
+    title {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
 
-div#landing
-  div.text
-    h1 {{ site.title }}
-    h2 {{ page.subtitle }}
-    | {% include socials.html %}
-    | {{ content }}
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+
+    // styles
+    link(href="/style.css", rel="stylesheet")
+    link(href="https://use.typekit.net/nwn3seh.css", rel="stylesheet")
+
+    // scripts
+    script(src="/scripts.js")
+
+    | {% capture description %}{{ page.excerpt | strip_html | strip_newlines | normalize_whitepsace | truncate: 175 }}{% endcapture %}
+
+    meta(name="description", content="{% if description != blank %}{{ description }}{% else %}{{ site.description }}{% endif %}")
+
+  body.dark-mode.stop-transitions(onload="bodyLoaded()")
+    script if (localStorage.getItem('mode') === 'light') document.body.style.background = '#ffffff';
+    script(src="/dark-mode.js")
+
+    | {% include dark-mode-toggle.html %}
+    div#landing
+      div.text
+        h1 {{ site.title }}
+        h2 {{ page.subtitle }}
+        | {% include socials.html %}
+        | {{ content }}

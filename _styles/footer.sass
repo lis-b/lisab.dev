@@ -1,0 +1,34 @@
+$footer-width: 750px
+
+div#footer
+  height: 100px
+  width: $footer-width
+  margin:
+    left: auto
+    right: auto
+  padding: 20px
+  opacity: 0.5
+
+  p
+    display: block
+    float: left
+    margin-top: 10px
+
+    &::after
+      content: "\2665"
+      color: #d20d0d
+      margin-left: 5px
+      font-size: 10px
+      position: relative
+      top: -1px
+
+  div#footer-socials
+    display: block
+    float: right
+
+    a
+      display: inline-block
+      margin: 5px
+
+    svg
+      height: 1.5em

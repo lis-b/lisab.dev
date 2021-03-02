@@ -8,5 +8,6 @@ div.window
   | {% if include.link %}{% if include.href %}<a href="{{ include.href }}">{% endif %}
   div.url
     span {{ include.link }}
-  | {% if include.href %}</a>{% endif %}{% endif %}
+  | {% endif %}
   img(src="{{ include.image }}", alt="{{ include.alt }}")
+  | {% if include.href %}</a>{% endif %}
