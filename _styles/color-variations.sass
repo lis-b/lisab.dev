@@ -2,11 +2,20 @@
   background: map-get($map, bg)
   color: map-get($map, text)
   @include apply-nav-colors($map)
+  @include apply-post-colors($map)
 
 @mixin apply-nav-colors($map)
   div#nav
     a
       color: map-get($map, navigation)
+
+@mixin apply-post-colors($map)
+  div#post
+    background-color: map-get($map, post-bg)
+
+    div.window
+      background-color: map-get($map, preview-window-bg)
+      border-color: map-get($map, preview-window-bg)
 
 // APPLIED
 body.dark-mode

@@ -1,0 +1,12 @@
+
+div.window
+  div.window-title
+    div.button-wrapper
+      div.red
+      div.yellow
+      div.green
+  | {% if include.link %}{% if include.href %}<a href="{{ include.href }}">{% endif %}
+  div.url
+    span {{ include.link }}
+  | {% if include.href %}</a>{% endif %}{% endif %}
+  img(src="{{ include.image }}", alt="{{ include.alt }}")

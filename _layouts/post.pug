@@ -2,7 +2,30 @@
 layout: base
 ---
 
-div#post
+div(id="post", class="{% if page.for %}extra-padding{% endif %}")
   h1 {{ page.title }}
-  h2 created for #[b {{ page.for }}]
-  div#inner {{ content }}
+
+  | {% if page.for %}
+  h2.created created for #[b {{ page.for }}]
+  | {% endif %}
+
+  | {% if page.in-dev %}
+  h2.dev in development
+  | {% endif %}
+
+  | {% if page.window-image %} {% include preview-window.html image=page.window-image alt="Project preview" link=page.window-link href=page.actual-url %} {% endif %}
+
+  div#repos
+    | {% if page.github %}
+    a(href="{{ page.github }}", aria-label="GitHub repository")
+      include ../assets/svg/SimpleIcons/github.svg
+    | {% endif %}{% if page.glitch %}
+    a(href="{{ page.glitch }}", aria-label="Glitch project")
+      include ../assets/svg/SimpleIcons/glitch.svg
+    | {% endif %}{% if page.devpost %}
+    a(href="{{ page.devpost }}", aria-label="DevPost page")
+      include ../assets/svg/SimpleIcons/devpost.svg
+    | {% endif %}
+
+  | {% if page.draft %}{% include draft.html %}{% endif %}
+  div#content {{ content }}
