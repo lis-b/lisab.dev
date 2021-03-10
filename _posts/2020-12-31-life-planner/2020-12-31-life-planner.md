@@ -1,6 +1,6 @@
 ---
 title: Life Planner
-year: 2020
+start: September 2020
 
 draft: true
 published: true

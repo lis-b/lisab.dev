@@ -3,6 +3,7 @@
   color: map-get($map, text)
   @include apply-nav-colors($map)
   @include apply-post-colors($map)
+  @include apply-preview-window-colors($map)
 
 @mixin apply-nav-colors($map)
   div#nav
@@ -13,9 +14,19 @@
   div#post
     background-color: map-get($map, post-bg)
 
+@mixin apply-preview-window-colors($map)
     div.window
       background-color: map-get($map, preview-window-bg)
       border-color: map-get($map, preview-window-bg)
+
+      div.red
+        background-color: map-get($map, preview-window-red)
+
+      div.yellow
+        background-color: map-get($map, preview-window-yellow)
+
+      div.green
+        background-color: map-get($map, preview-window-green)
 
 // APPLIED
 body.dark-mode

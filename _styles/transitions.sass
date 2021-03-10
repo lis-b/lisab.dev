@@ -22,6 +22,9 @@ body
     div.window
       @include transition(background-color $theme-transition-timing, border-color $theme-transition-timing)
 
+      div.button-wrapper div
+        @include transition(background-color $theme-transition-timing)
+
 *.stop-transitions
   &,
   *

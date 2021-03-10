@@ -6,7 +6,10 @@ $colors-default: (
   text: #000000,
   navigation: #000000,
   post-bg: #eeeeee,
-  preview-window-bg: #cccccc
+  preview-window-bg: #cfcfcf,
+  preview-window-red: #f67890,
+  preview-window-yellow: #ffda81,
+  preview-window-green: #89d47f
 );
 
 $colors-dark-mode: (
@@ -14,5 +17,8 @@ $colors-dark-mode: (
   text: #ffffff,
   navigation: #ffffff,
   post-bg: #111111,
-  preview-window-bg: #555555
+  preview-window-bg: #555555,
+  preview-window-red: #ee617c,
+  preview-window-yellow: #ffd369,
+  preview-window-green: #75d169
 );

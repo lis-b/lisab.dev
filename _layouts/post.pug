@@ -6,10 +6,10 @@ div(id="post")
   h1 {{ page.title }}
 
   | {% if page.for %}
-  h2.created created for #[b {{ page.for }}]
+  h2.created created for #[b {{ page.for }} {% if page.hide_year %}{% else %}{{ page.date | date: "%Y" }}{% endif %} ]
   | {% endif %}
 
-  h2.dev {% if page.present %}In Development{% else %}{{ page.date | date: "%B %Y" }}{% endif %}
+  h2.dev {% if page.present %}In Development{% elsif page.for %}{{ page.time | default: "" }}{% else %}{% if page.start %}{{ page.start | date: "%B %Y" }} — {% endif %}{{ page.date | date: "%B %Y" }}{% endif %}
 
   | {% if page.image %} {% include preview-window.html image=page.image alt="Project preview" link=page.link href=page.href %} {% endif %}
 

@@ -16,4 +16,4 @@ collections:
     output: true
     permalink: /:path
 
-permalink: /:title
+permalink: /:year/:title
