@@ -1,0 +1,50 @@
+---
+layout: base
+---
+
+div#navbar
+	div#links
+		a.portfolio(href="") Portfolio
+		a.resume(href="") Resume
+		a.contact(href="") Contact
+
+div#intro
+	div#name lisa bRothers
+	div#sites
+		| {% include socials.html %}
+
+div.section#portfolio
+	h1 Portfolio
+	div.content
+		| Content
+
+div.section#resume
+	h1 Resume
+	div.download
+		a(href="../assets/resume.pdf", download="Resume_LisaBrothers")
+			span Download full pdf
+			include ../assets/RemixIcon/file-download-fill.svg
+	div.content
+
+		h2 Current Positions
+		div.current
+			div
+				h3 Work
+				h4 Trulioo
+				h5 Junior Software Engineer (Co-op)
+				h6 August 2021&ndash;April 2022
+
+			div
+				h3 Education
+				h4 Univeristy of British Columbia
+				h5 3rd year Bachelor of Science in Computer Science
+				h6 May 2020&ndash;April 2024
+
+
+div.section#contact
+	h1 Contact
+	div.content
+		| Content
+
+div#footer
+	| Site footer

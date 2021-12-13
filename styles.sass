@@ -1,0 +1,121 @@
+---
+---
+
+$font: "MADE Outer Sans"
+$font-alt: "MADE Outer Sans Alt"
+$font-outline: "MADE Outer Sans Outline"
+$font-outline-alt: "MADE Outer Sans Outline Alt"
+
+$title-weight: 700
+$nav-weight: 400
+$body-weight: 100
+$body-weight-bold: 300
+
+
+*
+	box-sizing: border-box
+
+html, body
+	padding: 0
+	margin: 0
+	width: 100%
+	height: 100%
+
+body
+	background: #000000
+	color: #ffffff
+	font:
+		family: $font
+		weight: $body-weight
+
+	b
+		weight: $body-weight-bold
+
+.portfolio, #portfolio h1
+	text-transform: lowercase
+
+div#navbar
+
+
+div#links
+	display: flex
+	justify-content: space-evenly
+
+	border-bottom: 3px solid #ffffff
+	position: fixed
+	width: 100%
+	font-size: 50px
+	padding: 20px 0
+	background: #000000
+	font-weight: $nav-weight
+
+	a
+		text-decoration: none
+		color: #ffffff
+		font-family: $font-alt
+
+div#intro
+	display: flex
+	flex-direction: column
+	gap: 50px
+	justify-content: center
+	height: 100%
+
+
+div#name
+	font:
+		size: 150px
+		family: $font-outline-alt
+		weight: $title-weight
+	text:
+		align: center
+	line-height: 150px
+
+div#sites
+	display: flex
+	justify-content: center
+	gap: 50px
+
+	a
+		text-decoration: none
+	svg
+		height: 50px
+		fill: #ffffff
+
+
+div.section
+	padding: 40px 0
+
+	h1
+		font-size: 100px
+		text-align: center
+		font:
+			family: $font-outline-alt
+			weight: $title-weight
+		margin: 0
+
+	div.download
+		font-size: 25px
+		font-weight: $nav-weight
+		text-transform: uppercase
+		text-align: center
+
+		a
+			text-decoration: none
+			color: #ffffff
+
+		svg
+			fill: #ffffff
+			height: 40px
+			margin-left: 10px
+
+		span, svg
+			vertical-align: middle
+
+	&:nth-child(odd)
+		background: #1d1d1d
+
+	div.content
+		padding: 20px
+		width: 1200px
+		margin: 0 auto
