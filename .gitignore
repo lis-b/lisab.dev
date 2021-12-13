@@ -3,3 +3,14 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+node_modules
+_build
+_site
+Gemfile.lock
+package-lock.json
+.DS_Store
+__FONTS
+.jekyll-cache
+
+# Local Netlify folder
+.netlify

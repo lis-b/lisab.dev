@@ -1,0 +1,16 @@
+{
+  "name": "lisab.dev",
+  "version": "0.0.1",
+  "scripts": {
+    "install": "bundle install",
+    "start": "bliss b && http-server _site/ -c-1 -p $PORT"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lis-b/lisab.dev.git"
+  },
+  "dependencies": {
+    "http-server": "^14.0.0",
+    "jekyll-bliss": "^2.0.0"
+  }
+}
