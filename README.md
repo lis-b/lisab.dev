@@ -4,21 +4,22 @@ My portfolio website, yet to be hosted. Inspired by minimal, futuristic, and bru
 
 ## Todos
 ### General
-- [ ] Smooth scrolling(?)
+- [x] Smooth scrolling(?)
 - [ ] Credit page
 - [ ] Add icon licenses to respective subfolders
 - [ ] Use Git LFS for webfont when ready to host
 
 ### Landing Page
 - [x] Intro section
-- [ ] Navigation bar (adjust how it looks after scrolling 100%)
-- [ ] Portfolio placeholder text (eg. "currently populating")
+- [ ] Navigation bar sticky after scroll(?)
+- [x] Portfolio placeholder text (eg. "currently populating")
 - [x] Add resume download link
 - [ ] Update resume
-- [ ] Format current positions
-- [ ] Add contact form & email
-- [ ] Footer (make sure to link to credit page)
+- [ ] Add more to resume section
+- [ ] Add contact form
+- [x] Footer (make sure to link to credit page)
 - [ ] Investigate division methods between sections
+- [ ] To top button(?)
 
 ### Posts
 - [ ] Layout for posts

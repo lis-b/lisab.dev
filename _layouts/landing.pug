@@ -2,49 +2,45 @@
 layout: base
 ---
 
-div#navbar
+div#topbar
 	div#links
-		a.portfolio(href="") Portfolio
-		a.resume(href="") Resume
-		a.contact(href="") Contact
+		a.portfolio(href="/#portfolio") Portfolio
+		a.resume(href="/#resume") Resume
+		a.contact(href="/#contact") Contact
 
 div#intro
-	div#name lisa bRothers
+	div#name
 	div#sites
 		| {% include socials.html %}
 
-div.section#portfolio
-	h1 Portfolio
-	div.content
-		| Content
+div#content
+	div.section#portfolio
+		h1 Portfolio
+		div.download
+			span Posts in progress...
+			include ../assets/RemixIcon/pencil-fill.svg
+		div.content
 
-div.section#resume
-	h1 Resume
-	div.download
-		a(href="../assets/resume.pdf", download="Resume_LisaBrothers")
-			span Download full pdf
-			include ../assets/RemixIcon/file-download-fill.svg
-	div.content
-
-		h2 Current Positions
-		div.current
-			div
-				h3 Work
-				h4 Trulioo
-				h5 Junior Software Engineer (Co-op)
-				h6 August 2021&ndash;April 2022
-
-			div
-				h3 Education
-				h4 Univeristy of British Columbia
-				h5 3rd year Bachelor of Science in Computer Science
-				h6 May 2020&ndash;April 2024
+	div.section#resumex
+		h1 Resume
+		div.download
+			a(href="../assets/resume.pdf", target="_blank")
+				span Download full pdf
+				include ../assets/RemixIcon/file-download-fill.svg
 
 
-div.section#contact
-	h1 Contact
-	div.content
-		| Content
+	div.section#contact
+		h1 Contact
+		div.download
+			a(href="m&#97;&#105;lto&#58;%6&#56;e%6Cl&#111;&#64;lis&#37;61b&#46;&#100;%6&#53;&#118;")
+				span h&#101;ll&#111;&#64;l&#105;s&#97;b&#46;dev
+				include ../assets/RemixIcon/mail-send-line.svg
 
-div#footer
-	| Site footer
+	div#footer
+		div#madeby
+			include ../assets/RemixIcon/code-box-fill.svg
+			span by Lisa Brothers, 2021
+
+		div#misc
+			a(href="https://github.com/lis-b/lisab.dev") Source
+			a(href="/thanks") Thanks

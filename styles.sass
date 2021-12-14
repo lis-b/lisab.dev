@@ -11,9 +11,15 @@ $nav-weight: 400
 $body-weight: 100
 $body-weight-bold: 300
 
+$content-width: 1200px
+$content-padding: 20px
+
 
 *
 	box-sizing: border-box
+
+html
+	scroll-behavior: smooth
 
 html, body
 	padding: 0
@@ -28,31 +34,54 @@ body
 		family: $font
 		weight: $body-weight
 
-	b
-		weight: $body-weight-bold
 
 .portfolio, #portfolio h1
 	text-transform: lowercase
 
-div#navbar
+div#name
+		&::after
+			content: 'lisa bRothers'
 
-
-div#links
-	display: flex
-	justify-content: space-evenly
-
-	border-bottom: 3px solid #ffffff
-	position: fixed
+div#topbar
+	position: absolute
 	width: 100%
-	font-size: 50px
-	padding: 20px 0
 	background: #000000
-	font-weight: $nav-weight
+	top: 0
 
-	a
-		text-decoration: none
-		color: #ffffff
-		font-family: $font-alt
+	div#links
+		display: flex
+		justify-content: space-evenly
+
+		border-bottom: 2px solid #ffffff
+		font-size: 50px
+		padding: 20px 0
+		font-weight: $nav-weight
+		transition: 0.3s ease-in-out all
+
+		a
+			text-decoration: none
+			color: #ffffff
+			font-family: $font-alt
+
+// div#navbar
+// 	position: fixed
+// 	width: 100%
+// 	background: #000000
+// 	top: 0
+
+// 	a#sitename
+// 		font:
+// 			size: 40px
+// 			family: $font-outline-alt
+// 			weight: $title-weight
+// 		color: #ffffff
+// 		text-decoration: none
+// 		height: 100px
+// 		line-height: 100px
+// 		border-bottom: 2px solid #ffffff
+// 		text-align: center
+// 		width: 100%
+// 		display: block
 
 div#intro
 	display: flex
@@ -80,11 +109,12 @@ div#sites
 		text-decoration: none
 	svg
 		height: 50px
+		width: auto
 		fill: #ffffff
 
 
 div.section
-	padding: 40px 0
+	padding: 100px 0
 
 	h1
 		font-size: 100px
@@ -96,7 +126,7 @@ div.section
 
 	div.download
 		font-size: 25px
-		font-weight: $nav-weight
+		font-weight: $title-weight
 		text-transform: uppercase
 		text-align: center
 
@@ -107,15 +137,44 @@ div.section
 		svg
 			fill: #ffffff
 			height: 40px
+			width: auto
 			margin-left: 10px
 
 		span, svg
 			vertical-align: middle
 
 	&:nth-child(odd)
-		background: #1d1d1d
+		background: #111111
 
 	div.content
-		padding: 20px
-		width: 1200px
+		padding: $content-padding
+		width: $content-width
 		margin: 0 auto
+
+div#footer
+	padding: $content-padding
+	width: $content-width
+	margin: 0 auto
+	text-align: center
+
+	div#madeby
+		font-size: 20px
+
+		svg
+			fill: #ffffff
+			height: 30px
+
+		span, svg
+			vertical-align: middle
+
+	div#misc
+		text-align: center
+
+		a
+			display: inline-block
+			margin: 0 20px
+			text-decoration: none
+			color: #ffffff
+			font-weight: $title-weight
+			text-transform: uppercase
+
